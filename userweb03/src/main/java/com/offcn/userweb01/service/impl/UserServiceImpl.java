@@ -23,7 +23,7 @@ public class UserServiceImpl implements UserService {
     DiscoveryClient discoveryClient;
 
     String url="http://USERPROVIDER"+"/user";
-    
+
     @Override
     public Map getUserMap() {
         Map map = restTemplate.getForObject(url+"/getAll", Map.class);
