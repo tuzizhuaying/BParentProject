@@ -22,11 +22,11 @@ public class UserServiceImpl implements UserService {
     @Autowired
     DiscoveryClient discoveryClient;
 
-    String url="http://USERPROVIDER";
+    String url="http://USERPROVIDER"+"/user";
     
     @Override
     public Map getUserMap() {
-        Map map = restTemplate.getForObject(url+"/user/getAll", Map.class);
+        Map map = restTemplate.getForObject(url+"/getAll", Map.class);
         return map;
     }
 
